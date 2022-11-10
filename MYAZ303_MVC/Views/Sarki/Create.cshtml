@@ -1,0 +1,27 @@
+﻿@model Sarki
+
+<form method="post">
+    <div class="border p-3 mt-4">
+        <div class="row pb-2">
+            <h2 class="text-primary">Şarkı Oluştur</h2>
+            <hr />
+        </div>
+        <div class="mb-3">
+            <label>Şarkı Adı</label>
+            <input asp-for="sarkiAd" class="form-control" />
+            <span asp-validation-for="sarkiAd" class="text-danger"></span>
+            <label>Süre</label>
+            <input asp-for="sure" class="form-control" />
+            <span asp-validation-for="sure" class="text-danger"></span>
+            <label>Sanatçı</label>
+            <input asp-for="sanatci" class="form-control" />
+            <span asp-validation-for="sanatci" class="text-danger"></span>
+            <label>Albüm</label>
+            <input asp-for="album" class="form-control" />
+            <span asp-validation-for="album" class="text-danger"></span>
+
+        </div>
+        <button type="submit" class="btn btn-primary">Oluştur</button>
+        <a asp-controller="Sarki" asp-action="Index" class="btn btn-secondary" style="width:150px">Geri Dön</a>
+    </div>
+</form>
